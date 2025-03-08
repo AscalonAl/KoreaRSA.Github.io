@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-/* Fullscreen Hero Section with Background */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -19,14 +18,12 @@
     padding: 20px;
 }
 
-/* Mobile Background */
 @media (max-width: 768px) {
     .hero-section {
         background: url('images/mobile-background.jpg') no-repeat center center/cover;
     }
 }
 
-/* Dark Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -37,7 +34,6 @@
     z-index: 1;
 }
 
-/* Container Styling */
 .container {
     position: relative;
     z-index: 2;
@@ -52,7 +48,7 @@
     display: inline-block;
     letter-spacing: 5px;
     color: #f1f1f1;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,7 +69,6 @@
     }
 }
 
-/* Delay for Each Letter */
 .greetings > span:nth-child(2) { animation-delay: 0.2s; }
 .greetings > span:nth-child(3) { animation-delay: 0.4s; }
 .greetings > span:nth-child(4) { animation-delay: 0.6s; }
@@ -86,14 +81,15 @@
     width: 80%;
     max-width: 400px;
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
     color: white;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     transition: all 0.3s;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .elegant-input::placeholder {
@@ -102,29 +98,29 @@
 
 .elegant-input:focus {
     outline: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Button */
 .btn-elegant {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
     color: white;
-    background-color: rgba(255, 69, 58, 0.6);
+    background-color: rgba(255, 69, 58, 0.8);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
     font-weight: 500;
     letter-spacing: 1px;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .btn-elegant:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 69, 58, 1);
+    box-shadow: 0 8px 30px rgba(255, 69, 58, 0.5);
     transform: translateY(-3px);
 }
