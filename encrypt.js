@@ -14,12 +14,14 @@ function modExp(base, exp, mod) {
 function encipher(publicKey, plainText) {
     const n = 3337;
     let cipherText = '';
+    let numericValues = [];
     for (let char of plainText) {
         const i = char.charCodeAt(0);
         const cipher = modExp(i, publicKey, n);
         cipherText += String.fromCharCode(cipher);
+        numericValues.push(cipher);
     }
-    return cipherText;
+    return { cipherText, numericValues: numericValues.join(' ') };
 }
 
 function decipher(privateKey, cipherText) {
@@ -35,12 +37,12 @@ function decipher(privateKey, cipherText) {
 
 // Handle form submission
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
+    const form = document.getElementById('encryptionForm');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const input = document.querySelector('input').value;
         const publicKey = 79;
-        const encrypted = encipher(publicKey, input);
-        window.location.href = `result.html?encrypted=${encodeURIComponent(encrypted)}`;
+        const { cipherText, numericValues } = encipher(publicKey, input);
+        window.location.href = `result.html?encrypted=${encodeURIComponent(cipherText)}&numbers=${encodeURIComponent(numericValues)}`;
     });
 });
