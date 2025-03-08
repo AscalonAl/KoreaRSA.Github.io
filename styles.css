@@ -64,15 +64,15 @@ h1 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Tombol elegan responsif */
+/* Tombol elegan dengan ukuran lebih kecil */
 .btn-elegant {
-    width: clamp(100px, 30%, 200px);
-    padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
+    width: clamp(80px, 20%, 150px);
+    padding: clamp(5px, 1.5vw, 8px) clamp(10px, 3vw, 15px);
     border: none;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: rgba(255, 100, 100, 0.8);
     color: white;
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -100,6 +100,6 @@ h1 {
 
     .input-elegant, .btn-elegant {
         max-width: 80%;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
