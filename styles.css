@@ -28,6 +28,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    max-width: 90%;
 }
 
 /* Judul */
@@ -42,7 +43,7 @@ h1 {
 .input-elegant {
     width: 100%;
     max-width: 300px;
-    padding: 10px 15px;
+    padding: clamp(8px, 2vw, 10px) clamp(12px, 2vw, 15px);
     border: none;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -63,19 +64,21 @@ h1 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Tombol elegan */
+/* Tombol elegan responsif */
 .btn-elegant {
-    width: 100%;
-    max-width: 200px;
-    padding: 10px 20px;
+    width: clamp(100px, 30%, 200px);
+    padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
     border: none;
     border-radius: 25px;
     background-color: rgba(255, 100, 100, 0.8);
     color: white;
-    font-size: clamp(0.8rem, 2vw, 1rem); /* Ukuran font responsif */
+    font-size: clamp(0.8rem, 2vw, 1rem);
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btn-elegant:hover {
@@ -89,13 +92,14 @@ h1 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Membuat font responsif dan tetap proporsional di semua perangkat */
+/* Responsif untuk layar kecil */
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .input-elegant, .btn-elegant {
-        max-width: 90%;
+        max-width: 80%;
+        font-size: 1rem;
     }
 }
