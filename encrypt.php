@@ -26,9 +26,10 @@ function decipher($privateKey, $cipherText) {
 $publicKey = 79;
 $privateKey = 1019;
 
-$inputText = $_POST['text'];
-$cipherText = encipher($publicKey, $inputText);
-echo "<h2>Encrypted Text:</h2><p>$cipherText</p>";
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $inputText = $_POST['inputText'] ?? '';
+    $cipherText = encipher($publicKey, $inputText);
+    echo "<h2>Encrypted Text:</h2><p>$cipherText</p>";
+}
 
 ?>
