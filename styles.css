@@ -42,14 +42,14 @@ h1 {
 /* Input elegan */
 .input-elegant {
     width: 100%;
-    max-width: 300px;
-    padding: clamp(8px, 2vw, 10px) clamp(12px, 2vw, 15px);
+    max-width: 200px;
+    padding: clamp(5px, 1.5vw, 8px) clamp(8px, 2vw, 12px);
     border: none;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-    margin-bottom: 15px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     outline: none;
     transition: all 0.3s;
@@ -64,15 +64,15 @@ h1 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Tombol elegan dengan ukuran lebih kecil */
+/* Tombol elegan lebih kecil */
 .btn-elegant {
-    width: clamp(80px, 20%, 150px);
-    padding: clamp(5px, 1.5vw, 8px) clamp(10px, 3vw, 15px);
+    width: clamp(60px, 15%, 100px);
+    padding: clamp(4px, 1vw, 6px) clamp(6px, 2vw, 10px);
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: rgba(255, 100, 100, 0.8);
     color: white;
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -83,7 +83,7 @@ h1 {
 
 .btn-elegant:hover {
     background-color: rgba(255, 70, 70, 0.9);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -95,11 +95,11 @@ h1 {
 /* Responsif untuk layar kecil */
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .input-elegant, .btn-elegant {
-        max-width: 80%;
-        font-size: 0.8rem;
+        max-width: 70%;
+        font-size: 0.7rem;
     }
 }
