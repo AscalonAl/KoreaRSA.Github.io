@@ -16,9 +16,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-/* Responsive Background for Mobile */
+/* Mobile Background */
 @media (max-width: 768px) {
     .hero-section {
         background: url('images/mobile-background.jpg') no-repeat center center/cover;
@@ -40,18 +41,21 @@
 .container {
     position: relative;
     z-index: 2;
-    padding: 20px;
+    text-align: center;
+    max-width: 90%;
 }
 
-/* Glowing Animated Text */
+/* Responsive Glowing Text */
 .greetings {
     font-size: clamp(2rem, 8vw, 5rem); /* Responsive font size */
     font-weight: 700;
-    display: flex;
-    gap: 5px;
-    margin-bottom: 20px;
+    display: inline-block;
     letter-spacing: 5px;
     color: #f1f1f1;
+    white-space: nowrap; /* Prevent text wrapping */
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .greetings > span {
@@ -77,9 +81,10 @@
 .greetings > span:nth-child(6) { animation-delay: 1s; }
 .greetings > span:nth-child(7) { animation-delay: 1.2s; }
 
-/* Responsive Input Box */
+/* Input Box */
 .elegant-input {
-    max-width: 90%;
+    width: 80%;
+    max-width: 400px;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
@@ -87,7 +92,8 @@
     color: white;
     backdrop-filter: blur(5px);
     transition: all 0.3s;
-    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-top: 20px;
 }
 
 .elegant-input::placeholder {
@@ -101,7 +107,7 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Button */
+/* Button */
 .btn-elegant {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
@@ -112,7 +118,8 @@
     transition: all 0.3s;
     font-weight: 500;
     letter-spacing: 1px;
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Responsive font size */
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-top: 15px;
 }
 
 .btn-elegant:hover {
@@ -120,11 +127,4 @@
     border-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
     transform: translateY(-3px);
-}
-
-/* Additional Styles */
-h1, p {
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    font-size: clamp(1.2rem, 4vw, 2rem); /* Responsive font size */
 }
